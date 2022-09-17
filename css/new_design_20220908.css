@@ -1,0 +1,4 @@
+#gnb .depth2.menu01 .menu{background: #4285f4;}
+#gnb .depth2.menu01 .menuLvl2{background: #4285f4;}
+#gnb .depth2 .menu > ul:last-child{border-bottom: 1px solid #8dacf7;}
+#gnb .depth2 .menu > ul > li{border-top:1px solid #8dacf7;}
