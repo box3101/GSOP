@@ -2026,7 +2026,6 @@ body {border-width:0px; width:100%;}
 #gnb .depth2 .menu > ul > li > ul > li > ul > li> a{color: #babec2;}
 #gnb .depth2 .menu > ul > li > ul > li > ul > li .active{color: #fff;}
 
-.CellR-main-tab{}
 .CellR-main-tab ul{
     display: flex;
     border-bottom: 1px solid #cccccc;
@@ -2045,13 +2044,22 @@ body {border-width:0px; width:100%;}
     line-height: 38px;
     font-weight: 500; color: #666666; text-align:center;
 }
+.CellR-main-tab ul li a::after{
+    content: '';
+    display: inline-block;
+    left: 0; right: 0; bottom: 0;
+    height: 2px; background: #1428a0;width: 100%;
+    position: absolute;
+    width: 0%;
+    transition: all 0.4s ease-in-out;
+}
 .CellR-main-tab ul li.active a{
     color: #1428a0; font-weight: bold;
 }
 .CellR-main-tab ul li.active a::after{
     content: '';
     display: inline-block;
-    left: 0; right: 0; bottom: 0;
+    left: 0;  bottom: 0;
     height: 4px; background: #1428a0;width: 100%;
     position: absolute;
 }
@@ -2087,13 +2095,28 @@ body {border-width:0px; width:100%;}
     flex:1 1 100%;
     max-width: 100%;
 }
-.com-sarch-type01 .flex .lef ul.w100 .form-wrap{
+.form-wrap{
     position: relative;
 }
-.com-sarch-type01 .flex .lef ul.w100 .form-wrap .c-form-box{
-    display: flex; align-items: center;
+.form-wrap.flex{
+    display: flex;
 }
-.com-sarch-type01 .flex .lef ul.w100 .form-wrap .c-form-box span{
+.form-wrap .form-chkbox__control{
+    margin-right: 15px;
+    padding-left: 22px;
+}
+.form-wrap.flex .form-chkbox__indicator{
+    left: 10px;
+    top: 10px;
+}
+.form-wraps .form-chkbox__control{
+    display: flex;
+}
+.form-wrap .c-form-box{
+    display: flex; align-items: center;
+    position: relative;
+}
+.form-wrap .c-form-box span{
     display: inline-block; width: auito; background: #a5a5a5;
     color: #fff; font-weight: 500; text-align: center;
     position: relative; 
@@ -2102,19 +2125,22 @@ body {border-width:0px; width:100%;}
     margin-right: 6px;
     font-size: 13px;
 }
-.com-sarch-type01 .flex .lef ul.w100 .form-wrap .c-form-box span img{
+.form-wrap .c-form-box span img{
     display: inline-block; margin-left: 2px;
     cursor: pointer;
     position: relative;
     top: -1px;
 }
-.com-sarch-type01 .flex .lef ul.w100 .form-wrap button{
+.form-wrap button{
     position: absolute;
     background: url(../../../images/theme/blue/c-search.png)no-repeat;
     width: 20px; height: 20px;
     top: 53%;
     transform: translateY(-50%);
     right: 8px;
+}
+.form-wrap button.r22{
+    right: 22px;
 }
 .com-sarch-type01 .flex .lef ul li dl{
     display: flex;
@@ -2167,6 +2193,7 @@ body {border-width:0px; width:100%;}
 .com-table{
     border-collapse: collapse;
 }
+.com-table.td-p10 td{padding: 10px;}
 .com-table tr{}
 .com-table tr th .form-chkbox__indicator{
     background: none; border: 1px solid #fff;
@@ -2642,6 +2669,42 @@ a.download span{}
     color: #fff;
     font-weight: bold;
 }
+.com-tpy-had3{}
+.com-tpy-had3 p{
+    font-weight: bold; color: #333333;
+    position: relative; padding-left: 12px;
+    font-size: 20px;
+}
+.com-tpy-had3 p::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 14px;
+    background: #253378;
+}
+.com-tpy-had2{
+    position: relative;
+    padding: 6px 8px;
+    background: #1428a0;
+    font-size: 20px; font-weight: bold; color: #fff;
+    display: inline-block;
+}
+.com-tpy-had2 p{
+    padding-left: 15px;
+}
+.com-tpy-had2 p:after {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: 11px;
+    top: 50%; transform: translateY(-50%);
+}
 
 .com-tpy-had{
     height: 45px;
@@ -2679,6 +2742,9 @@ a.download span{}
     padding: 15px 10px;
     background: #f5f5f5;
     border-radius: 0 0 10px 10px;
+}
+.com-bg-info.bd-full{
+    border-radius: 10px 10px 10px 10px;
 }
 .com-bg-info.bg-fff{
     background: #fff;
@@ -2803,6 +2869,9 @@ a.download span{}
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
+}
+.com-had-type02.bg-fff{
+    background: #fff;
 }
 .com-had-type02>div{
     display: flex;
@@ -2952,4 +3021,136 @@ a.download span{}
 }
 .desc-txt{
     color: darkred;
+}
+.process-wrap{}
+.bd-line-type1{
+    border: 1px solid #aaaaaa;
+    padding: 10px 7px;
+    border-radius: 5px;
+}
+.bd-line-type2{
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+.process-wrap ul{
+    display: flex;
+    gap: 12px;
+}
+.process-wrap ul li{
+    flex: 1; transition: all 0.4s ease-in-out;
+}
+.process-wrap ul li a .wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    padding: 16px 0;
+    padding-top: 32px;
+    transition: all 0.4 ease-in-out;
+    height: 109px;
+}
+.process-wrap ul li a .wrap::after{
+    content: '';
+    position: absolute;
+    left: 0; width: 100%; top: 0;
+    height: 11px;
+    background: #c7c7c7;
+    border-radius: 5px 5px 0 0;
+}
+.process-wrap ul li a .wrap p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7c7c7;
+}
+.process-wrap ul li a .wrap svg{
+    position: relative;
+    margin-right: 15px;
+}
+.process-wrap ul li a .wrap svg path,.process-wrap ul li a .wrap svg rect,.process-wrap ul li a .wrap svg line{
+    position: relative;
+    fill: transparent;
+    stroke: #C7C7C7!important;
+    stroke-width: 2;
+    transition: all .4s ease-in-out;
+    stroke-dasharray: 150;
+    /* animation-delay: 0.4s;
+    animation: ani 4s; */
+}
+.process-wrap ul li:hover{
+    flex:1.1;
+}
+.process-wrap ul li a .wrap:hover p{
+    color: #1428a0;
+}
+.process-wrap ul li a .wrap:hover::after{
+    background: #1428a0;
+}
+.process-wrap ul li a .wrap:hover svg path,.process-wrap ul li a .wrap:hover svg rect,.process-wrap ul li a .wrap:hover svg line{
+    stroke: #1428a0!important;
+    animation: ani 3s;
+}
+.process-wrap ul li.is-active a .wrap p{
+    color: #1428a0;
+}
+.process-wrap ul li.is-active a .wrap::after{
+    background: #1428a0;
+}
+.process-wrap ul li.is-active a .wrap svg path,.process-wrap ul li.is-active a .wrap svg rect,.process-wrap ul li.is-active a .wrap svg line{
+    stroke: #1428a0!important;
+    animation: ani 3s;
+}
+@keyframes ani{
+    0%{
+        stroke-dashoffset: 150;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+.form-chkbox input:checked ~ .form-chkbox__indicator::after {
+    display: block;
+}
+.form-chkbox input:checked + .form-chkbox__indicator {
+    background: #1428a0;
+}
+.language{
+    display: flex;
+    gap:6px!important;
+}
+.language li{
+    flex: 1;
+    transition: all 0.4s ease-in-out;
+}
+.language li a{
+    display: inline-block;
+    height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    background: #a5a5a5; color: #fff;
+    font-size: 18px; font-weight: bold;
+    transition: all 0.4s ease-in-out;
+    border-radius: 5px;
+}
+.language li a:hover{
+    background: #1428a0;
+}
+.language li.is-active{
+    flex: 1.1;
+}
+.language li.is-active a{
+    background: #1428a0;
+}
+
+.ch-txt{
+    display: flex; align-items: center; justify-content: center;
+    width: 25px; height: 28px;
+    border: 2px solid #253378;
+    margin-left: 15px;
+}
+.ch-txt span{
+ display: inline-block;
+ font-size: 15px; font-weight: bold;
+ color: #253378;
 }
