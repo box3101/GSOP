@@ -76,15 +76,16 @@
         <div id="gnb" style="width: 220px;">
           <ul style="display: none;">
             <li>
-             
-          
-          <a href="#">
+
+              <a href="#">
                 <img src="./images/theme/blue/m-logo.png" alt="">
               </a>
-         
+
             </li>
-<li><a href="#" data-target-menu="allmenu" class="home"></a></li>
-            <li><a href="#" data-target-menu="allmenu" onclick="showMenu(this);return false;" class="gnb01">전체메뉴펼침</a>
+            <li><a href="#" data-target-menu="allmenu" class="home"></a></li>
+            <li>
+              <a href="#" data-target-menu="allmenu" onclick="showMenu(this);return false;" class="gnb01">전체메뉴펼침
+              </a>
             </li>
             <li>
               <div class="fniconbg">
@@ -208,7 +209,8 @@
                           Activity</span></a>
                       <ul
                         class="menu4                                                                                                                                                                                                                                                     menuLvl4 active">
-                        <li id="menu_PGM1752"><a href="main.do#PGM1752" class="active"><span class="leafY">Value-Up 실행자</span></a></li>
+                        <li id="menu_PGM1752"><a href="main.do#PGM1752" class="active"><span class="leafY">Value-Up
+                              실행자</span></a></li>
                         <li id="menu_PGM1753" class=""><a href="main.do#PGM1753" class=""><span class="leafY">Value-Up
                               리더</span></a></li>
                         <li id="menu_PGM1754" class=""><a href="main.do#PGM1754" class=""><span class="leafY">Value-Up
@@ -320,6 +322,12 @@
                 <li>표준체계</li>
                 <li>표준Acticity</li>
                 <li class="active">Acticity관리</li>
+                <!-- 설명자료 팝업 -->
+                <li class="desc-data">
+                  <a href="">
+                    <img src="./images/theme/blue/ico-desc-data.png" alt="">
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -400,6 +408,67 @@
           <div class="contentsWrap ">
             <div class="contents" style="opacity: 1;">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <!--
 *************************************************************************
 * CLASS 명	: valueCompManagerList.jsp
@@ -412,6 +481,8 @@
 *	1	임성지		2021. 02. 25		최 초 작 업
 **************************************************************************
 -->
+
+
 
 
               <div class="container tbl-bg">
@@ -501,7 +572,7 @@
                         </li>
                       </ul>
                       <ul class="w100">
-                        <li>
+                        <li class="mb0">
                           <dl>
                             <dt>책임담당자</dt>
                             <dd>
@@ -557,7 +628,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="com-tbl-wrap">
+                  <div class="com-tbl-wrap mh50">
                     <table class="com-table">
                       <colgroup>
                         <col width="40px">
@@ -718,6 +789,28 @@
                           <td class="left">Plant사업관리</td>
                           <td class="left">조직및인력</td>
                           <td class="left">인력</td>
+                          <td class="left">조직구성</td>
+                          <td class="left">
+                            <a href="#">인력 충원</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>홍길동</td>
+                          <td>반려</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
                           <td class="left">일반교육(OJT)</td>
                           <td class="left">
                             <a href="#">상세 인력 계획 점검</a>
@@ -814,6 +907,204 @@
                           <td>0.2</td>
                           <td>홍길동</td>
                           <td>반려</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-chkbox">
+                              <label class="form-chkbox__control control--checkbox">
+                                <input type="checkbox">
+                                <div class="form-chkbox__indicator"></div>
+                              </label>
+                            </div>
+                          </td>
+                          <td class="left">마케팅</td>
+                          <td class="left">Plant사업관리</td>
+                          <td class="left">조직및인력</td>
+                          <td class="left">인력</td>
+                          <td class="left">기능 숙달교육</td>
+                          <td class="left">
+                            <a href="#">상세 인력 계획 점검</a>
+                          </td>
+                          <td>0.2</td>
+                          <td>0.2</td>
+                          <td>김길동</td>
+                          <td>상신취소</td>
                         </tr>
                         <tr>
                           <td>
@@ -1052,108 +1343,6 @@
               </div>
 
             </div>
-          </div>
-
-          <!-- 20220913 모달팝업 -->
-          <!--TODO .is-visible 추가시 팝업 생성 -->
-          <div class="cd-popup is-visible">
-            <div class="cd-popup-container">
-              <div class="had-tit">
-                Level3
-              </div>
-
-              <div class="contents">
-                <!-- 팝업내용 -->
-                <div class="bg-info">
-                  <div class="pop-tbl-type01">
-                    <table>
-                      <colgroup>
-                        <col width="115px">
-                        <col width="80px">
-                        <col width="auto">
-                      </colgroup>
-                      <tr>
-                        <th colspan="2">프로세스 Type <span class="c-red">*</span></th>
-                        <td>
-                          <select name="" id="" class="c-form-select">
-                            <option value="">마케팅</option>
-                          </select>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th colspan="2">업무 Type <span class="c-red">*</span></th>
-                        <td>
-                          <select name="" id="" class="c-form-select">
-                            <option value="">Plant사업관리</option>
-                          </select>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th colspan="2">Level1<span class="c-red">*</span></th>
-                        <td>
-                          <select name="" id="" class="c-form-select">
-                            <option value="">공정 투자검토</option>
-                          </select>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th colspan="2">Level2<span class="c-red">*</span></th>
-                        <td>
-                          <input type="text" class="c-form-input" placeholder="설비사양 결정">
-                        </td>
-                      </tr>
-                      <tr>
-                        <th rowspan="3">Level3<span class="c-red">*</span></th>
-                        <td class="c-main">
-                          한국어
-                        </td>
-                        <td>
-                          <input type="text" class="c-form-input" placeholder="생산설비 검토 기준 확정">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="c-main">
-                          영어
-                        </td>
-                        <td>
-                          <input type="text" class="c-form-input" placeholder="생산설비 검토 기준 확정">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="c-main">
-                          중국어
-                        </td>
-                        <td>
-                          <input type="text" class="c-form-input" placeholder="생산설비 검토 기준 확정">
-                        </td>
-                      </tr>
-                      <tr>
-                        <th colspan="2">사용여부</th>
-                        <td>
-                          <select name="" id="" class="c-form-select">
-                            <option value="">사용</option>
-                          </select>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-                <ul class="c-btn-set mt8">
-                  <li>
-                    <a href="#">
-                      <span>저장</span>
-                    </a>
-                  </li>
-                  <li class="delete">
-                    <a href="#">
-                      <span>닫기
-                      </span></a>
-                  </li>
-                </ul>
-                <!-- 팝업내용 eee -->
-              </div>
-            </div>
-            <!-- cd-popup-container -->
           </div>
         </div>
       </div>
@@ -1595,6 +1784,36 @@
 
 
   </div>
+
+
+  <!--TODO 전체메뉴 팝업 생성 -->
+  <div class="home-layers">
+    <ul>
+      <li><a href="#" title="대시보드" class="menu02"
+          ><span>대시보드</span></a>
+      </li>
+      <li><a href="#" title="업무" class="menu02"
+          ><span>업무</span></a>
+      </li>
+      <li><a href="#" title="개인성과" class="menu02"
+          ><span>개인성과</span></a>
+      </li>
+      <li><a href="#" title="조직성과" class="menu02"
+          ><span>조직성과</span></a>
+      </li>
+      <li><a href="#" title="커뮤니티" class="menu02"
+          ><span>커뮤니티</span></a>
+      </li>
+      <li><a href="#" title="인사관리" class="menu02"
+          ><span>인사관리</span></a>
+      </li>
+      <li><a href="#" title="설정관리" class="menu02"
+          ><span>설정관리</span></a>
+      </li>
+    </ul>
+  </div>
+  <!-- cd-popup-container -->
+
 </body>
 
 </html>
