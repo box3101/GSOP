@@ -68,7 +68,7 @@
 
 </head>
 
-<body>
+<body class="basic">
   <div id="wrap">
     <!-- 콘텐츠 시작 -->
     <div id="container" class="gnb_open">
@@ -333,7 +333,7 @@
           </div>
           <div class="rnb">
             <div style="float: left; clear: both;">
-              <div class="ico-bg has-tooltip" data-original-title="null"><a href="#"><img
+              <div class="ico-bg has-tooltip all-menu" data-original-title="null"><a href="#"><img
                     src="images/theme/blue/ico-amenu.png" onclick="gnbApp.popMNA();return false;" alt="전체메뉴"></a></div>
               <div class="ico-bg has-tooltip" data-original-title="null"><a href="#"><img
                     src="images/theme/blue/ico-manual.png" onclick="gnbApp.popMNA();return false;" alt="매뉴얼"></a></div>
@@ -1786,33 +1786,255 @@
   </div>
 
 
-  <!--TODO 전체메뉴 팝업 생성 -->
+  <!-- TODO 홈레이어 팝업 생성 -->
   <div class="home-layers">
     <ul>
-      <li><a href="#" title="대시보드" class="menu02"
-          ><span>대시보드</span></a>
+      <li>
+        <a href="#" title="대시보드" class="menu01">
+          <span>대시보드</span>
+        </a>
       </li>
-      <li><a href="#" title="업무" class="menu02"
-          ><span>업무</span></a>
+      <li>
+        <a href="#" title="업무" class="menu02">
+          <span>업무</span></a>
       </li>
-      <li><a href="#" title="개인성과" class="menu02"
-          ><span>개인성과</span></a>
+      <li>
+        <a href="#" title="개인성과" class="menu03">
+          <span>개인성과</span>
+        </a>
       </li>
-      <li><a href="#" title="조직성과" class="menu02"
-          ><span>조직성과</span></a>
+      <li>
+        <a href="#" title="조직성과" class="menu04">
+          <span>조직성과</span>
+        </a>
       </li>
-      <li><a href="#" title="커뮤니티" class="menu02"
-          ><span>커뮤니티</span></a>
+      <li>
+        <a href="#" title="조직평가" class="menu05">
+          <span>조직평가</span>
+        </a>
       </li>
-      <li><a href="#" title="인사관리" class="menu02"
-          ><span>인사관리</span></a>
+      <li>
+        <a href="#" title="인사평가" class="menu06">
+          <span>인사평가</span>
+        </a>
       </li>
-      <li><a href="#" title="설정관리" class="menu02"
-          ><span>설정관리</span></a>
+      <li>
+        <a href="#" title="커뮤니티" class="menu07">
+          <span>커뮤니티</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" title="인사관리" class="menu08">
+          <span>인사관리</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" title="설정관리" class="menu09">
+          <span>설정관리</span>
+        </a>
       </li>
     </ul>
   </div>
-  <!-- cd-popup-container -->
+
+  <script>
+    let click = true;
+
+    $("#gnb .home").on("click", function () {
+      if (click) {
+        $(".home-layers").addClass("on");
+        click = false;
+      } else if (click == false) {
+        $(".home-layers").removeClass("on");
+        click = true;
+      }
+    });
+
+
+  </script>
+  <!-- //TODO 홈레이어 팝업 생성 -->
+
+  <!-- TODO 전체메뉴 팝업 생성 -->
+  <section class="all-menus">
+    <article class="header">
+      <div class="wrap">
+        <h1 class="lef">
+          전체메뉴
+        </h1>
+        <div class="ref">
+          <div class="checkbox-toggle">
+            <input id="toggle-checkbox" type="checkbox">
+            <label for="toggle-checkbox"></label>
+          </div>
+          <h1>메인페이지 변경</h1>
+          <a href="#" class="close">
+            <img src="./images/theme/blue/all-menu-close.png" alt="">
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="info">
+      <ul>
+        <li>
+          <dt>대시보드</dt>
+          <dd>
+            <ul>
+              <li><a href="#">개인대시보드</a></li>
+            </ul>
+          </dd>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <dt>표준체계</dt>
+          <dd>
+            <ul>
+              <li><a href="#">업무분류관리</a></li>
+              <li><a href="#">기준일정및아이템</a></li>
+              <li><a href="#">표준Activity</a></li>
+            </ul>
+          </dd>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <dt>업무</dt>
+          <dd>
+            <ul>
+              <li><a href="#">업무/협업</a></li>
+              <li><a href="#">일일/주간보고</a></li>
+            </ul>
+          </dd>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <dt>커뮤니티</dt>
+          <dd>
+            <ul>
+              <li>
+                <a href="#">공지및자료실</a>
+              </li>
+              <ul>
+                <li class="l-bar">
+                  <a href="#">-의견수렴</a>
+                </li>
+                <li class="l-bar">
+                  <a href="#">-게시판</a>
+                </li>
+                <li class="l-bar">
+                  <a href="#">-Q&A</a>
+                </li>
+                <li class="l-bar">
+                  <a href="#">-자료실</a>
+                </li>
+              </ul>
+            </ul>
+          </dd>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <dt>대시보드</dt>
+          <dd>
+            <ul>
+              <li><a href="#">패스워드변경</a></li>
+              <ul>
+                <li>
+                  <a href="#">- 비밀번호변경</a>
+                </li>
+              </ul>
+            </ul>
+          </dd>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <script>
+    let click2 = true;
+
+    $(".all-menu>a").on("click", function (e) {
+      e.preventDefault();
+
+      if (click2) {
+        $(".all-menus").addClass("on");
+        click2 = false;
+      } else if (click2 == false) {
+        $(".all-menus").removeClass("on");
+        click2 = true;
+      }
+    });
+
+    $(".all-menus .close").on("click", function () {
+      $(".all-menus").removeClass("on");
+    });
+
+  </script>
+  <!-- //TODO 전체메뉴 팝업 생성 -->
+
+  <!-- 개인설정 팝업 생성 -->
+  <section class="settings">
+    <article class="info">
+      <article class="header">
+        <div class="wrap">
+          <h1>홍길동</h1>
+          <h2>부서명기입</h2>
+        </div>
+      </article>
+      <article class="info-desc">
+        <dl>
+          <dt>언어</dt>
+          <dd>
+            <select name="" id="" class="c-form-select">
+              <option value="">한국어</option>
+            </select>
+          </dd>
+        </dl>
+        <dl>
+          <dt>스킨변경 설정</dt>
+          <dd>
+            <a href="#" class="btn bg-main size-mid w100">
+              <span>스킨 보러가기</span>
+              <img src="./images/theme/blue/icon-btn-arr-right.png" alt="">
+            </a>
+
+          </dd>
+        </dl>
+      </article>
+    </article>
+    <article class="bot">
+      <div class="wrap">
+        <div class="time">
+          <img src="./images/theme/blue/icon-time.png" alt="">
+          <span>
+            Time : <span>02:45:18</spa>
+          </span>
+        </div>
+        <div class="login">
+          <img src="./images/theme/blue/ico-login.png" alt="">
+          <a href="#">로그아웃</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <script>
+    let click3 = true;
+
+    $(".user>a").on("click", function (e) {
+      e.preventDefault();
+
+      if (click3) {
+        $(".settings").addClass("on");
+        click3 = false;
+      } else if (click3 == false) {
+        $(".settings").removeClass("on");
+        click3 = true;
+      }
+    });
+
+  </script>
+  <!-- //개인설정 팝업 생성 -->
 
 </body>
 
