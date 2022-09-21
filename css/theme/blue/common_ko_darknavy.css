@@ -367,9 +367,23 @@ hd {width:100%; margin:0; padding:0; position:relative; z-index:10;}
 /* 200402 메뉴아이콘 수정, Depth2 아이콘 Active 상태 추가 끝.  */
 
 
-#gnb .depth2 .menu > ul > li > a > span {line-height:43px; display:block; margin:0px 22px 0px 18px; background:url(../../../images/theme/blue/ico-gnbarr-open.png) no-repeat right center;}/* 200603 좌측 마진값 수정 210129 좌측 마진값 수정 */
+#gnb .depth2 .menu > ul > li > a > span {position: relative; line-height:43px; display:block; margin:0px 22px 0px 18px;}/* 200603 좌측 마진값 수정 210129 좌측 마진값 수정 */
+#gnb .depth2 .menu > ul > li > a > span::after{
+    content: '';
+    top: 42%; transform: translateY(-50%); right: 0px;
+    width: 15px; height: 10px;
+    position: absolute;
+    background: url(../../../images/theme/blue/ico-gnbarr-close.png) no-repeat right -1px center;
+    transform: rotate(180deg);
+}
+#gnb .depth2 .menu > ul > li > a.active > span::after{
+    background: url(../../../images/theme/blue/ico-gnbarr-close.png) no-repeat right -2px center;
+    transform: rotate(0);
+    right: 2px;
+}
+
 #gnb .depth2 .menu > ul > li > a.active {background-color:#00c9e7;}
-#gnb .depth2 .menu > ul > li > a.active > span {line-height:43px; background:url(../../../images/theme/blue/ico-gnbarr-close.png) no-repeat right center; color:#fff;}
+#gnb .depth2 .menu > ul > li > a.active > span {line-height:43px; color:#fff;}
 #gnb .depth2 .menu > ul > li > a > span.hover {color:#fff;}
 
 #gnb .depth2 .menu > ul > li > ul {max-height:0px;overflow:hidden;transition:max-height 0.4s ease-in-out;}
@@ -378,10 +392,24 @@ hd {width:100%; margin:0; padding:0; position:relative; z-index:10;}
 #gnb .depth2 .menu > ul > li > ul > li:first-child {border-top:none;}
 #gnb .depth2 .menu > ul > li > ul > li:last-child {border-bottom:none;}
 
-#gnb .depth2 .menu > ul > li > ul > li > a {display:block; margin-left:12px; padding:0px 23px 0px 10px; font-size:13px; height:32px; color:#babec2; line-height:32px; padding-left:20px;} /* 200603 좌측 패딩값 수정  */
+#gnb .depth2 .menu > ul > li > ul > li > a {position: relative; display:block; margin-left:12px; padding:0px 23px 0px 10px; font-size:13px; height:32px; color:#babec2; line-height:32px; padding-left:20px;} /* 200603 좌측 패딩값 수정  */
 /* #gnb .depth2 .menu > ul > li > ul > li > a > span {display:block; height:32px; line-height:32px; background:url(../../../images/theme/blue/ico-gnbarr-open2.png) no-repeat right center;} */
 #gnb .depth2 .menu > ul > li > ul > li > a > span.leafY {display:block; height:32px; line-height:32px;}
-#gnb .depth2 .menu > ul > li > ul > li > a > span.leafN {display:block; height:32px; line-height:32px; background:url(../../../images/theme/blue/ico-gnbarr-open2.png) no-repeat right center;}
+#gnb .depth2 .menu > ul > li > ul > li > a> span.leafN::after{
+    position: absolute;
+    top: 42%; transform: translateY(-50%); right: 0px;
+    width: 15px; height: 10px;
+    content: ''; display: inline-block;
+    background: url(../../../images/theme/blue/ico-gnbarr-close.png) no-repeat right -2px center;
+    transform: rotate(0);
+    right: 24px;
+}
+#gnb .depth2 .menu > ul > li > ul > li > a.active > span.leafN::after{
+    background: url(../../../images/theme/blue/ico-gnbarr-close.png) no-repeat right -2px center;
+    transform: rotate(180deg);
+    right: 20px;
+}
+
 /* #gnb .depth2 .menu > ul > li > ul > li > a.active > span {background:url(../../../images/theme/blue/ico-gnbarr-close2.png) no-repeat right center; color:#00c9e7;} 200310 수정 */
 #gnb .depth2 .menu > ul > li > ul > li > a.active > span.leafY {color:#00c9e7;}
 #gnb .depth2 .menu > ul > li > ul > li > a.active > span.leafN {background:url(../../../images/theme/blue/ico-gnbarr-close2.png) no-repeat right center; color:#00c9e7;}
@@ -390,6 +418,7 @@ hd {width:100%; margin:0; padding:0; position:relative; z-index:10;}
 #gnb .depth2 .menu > ul > li > ul > li > ul > li {margin-top:17px;}
 #gnb .depth2 .menu > ul > li > ul > li > ul > li:first-child {margin-top:0px;}
 #gnb .depth2 .menu > ul > li > ul > li > ul > li > a {margin-left:45px; display:block; font-size:13px; color:#babec2; padding:0px 23px 0px 10px; background:url(../../../images/theme/blue/ico-bullet2.png) left center no-repeat;} /* 200310 수정, 210127 margin-left 수정*/
+
 #gnb .depth2 .menu > ul > li > ul > li > ul > li.active > a {margin-left:45px; display:block; font-size:13px; color:#00c9e7; padding:0px 23px 0px 10px; background:url(../../../images/theme/blue/ico-bullet2.png) left center no-repeat;}
 /* #gnb .depth2 .menu > ul > li > ul > li > ul > li > a > span {display:block; font-weight:normal; background:url(../../../images/theme/blue/ico-gnb.png) right center no-repeat;} */
 #gnb .depth2 .menu > ul > li > ul > li > ul > li:active > a {background:url(../../../images/theme/blue/ico-bullet2-ov.png) left center no-repeat; color:#fff;} /* 200312 수정 */
@@ -398,7 +427,7 @@ hd {width:100%; margin:0; padding:0; position:relative; z-index:10;}
 #gnb .depth2 .menu > ul > li > ul > li > ul > li .active {color:#00c9e7;}
 /* 메뉴 접기 버튼 위치 수정 200406   */
 #gnb a.close {display:none; position:absolute; left:194px; top:40px; width:31px; height:36px; text-indent:-9999px;
-border: 1px solid #fff; background: var(--basic-color)
+border: 1px solid #fff; background: var(--basic-color-secondary);
 }
 #gnb a.close:hover,#gnb a.close.active {display:none; position:absolute; right:18px; top:40px; width:31px; height:36px; text-indent:-9999px;  background:url(../../../images/theme/blue/btn-menu-close-ov_dn.png) no-repeat;}
 /* 메뉴 접기 버튼 위치 수정 끝 200406   */
@@ -1914,21 +1943,33 @@ body {border-width:0px; width:100%;}
     }
 
 
-/* 20220908 CSS 추가 */
-body.basic{
-    --basic-color: #4285f4;
-    /* --basic-color2 :  */
-}
-body.red{
-    --basic-color: red;
+/**************************  스킨변경 칼라 선택 ******************************/
+body.Basic{
+    /* TODO 원하는 색상 hsla값 넣어주세요 */
+    --basic-color: hsla(217,83%,61%,1);
+
+    /* TODO 공통: Hsla 세번째 인자값 위에서 -6% 빼주세요 */
+    --basic-color-secondary :  hsla(217,83%,55%,1);
 }
 
-#gnb .depth2.menu01 .menu{background: var(--basic-color)}
-#gnb .depth2.menu01 .menuLvl2{background: var(--basic-color)}
+body.Green{
+    --basic-color: hsla(117,77%,36%,1);
+    --basic-color-secondary: hsla(117,77%,26%,1);
+}
+
+body.Autumn{
+    --basic-color: hsla(21,70%,70%,1);
+    --basic-color-secondary: hsla(21,70%,64%,1);
+}
+
+/* Yellow , deepGreen , Spring ... 등 추가*/
+
+#gnb .depth2.menu01 .menu{background: var(--basic-color);}
+#gnb .depth2.menu01 .menuLvl2{background: var(--basic-color);}
 #gnb .depth2 .menu > ul:last-child{border-bottom: 1px solid rgba(255,255,255,0.3);}
 #gnb .depth2 .menu > ul > li{border-top:1px solid rgba(255,255,255,0.3);}
-#gnb .depth2.menu01 .menuLvl2 > li:hover{background: var(--basic-color)}
-#gnb .depth2.menu01 .menuLvl3{background: var(--basic-color)}
+#gnb .depth2.menu01 .menuLvl2 > li:hover{background: var(--basic-color);}
+#gnb .depth2.menu01 .menuLvl3{background: var(--basic-color);}
 #gnb a.close{
     left:188px;
 }
@@ -1957,19 +1998,25 @@ body.red{
     background: none;
 }
 #gnb .depth2 .menu > ul > li > a > span{line-height: 50px;}
-#gnb .depth2 .menu > ul > li > a.active > span{line-height: 50px; font-weight: bold; opacity: 1;background: url(../../../images/theme/blue/ico-gnbarr-close.png) no-repeat right -1px center;}
+#gnb .depth2 .menu > ul > li > a.active > span{line-height: 50px; font-weight: bold; opacity: 1;}
 #gnb .depth2 .menu > ul > li > a > span{font-weight: 400;opacity: 0.9;color: #fff;}
-#gnb .depth2 .menu > ul > li > a.active{border-bottom: 1px solid rgba(255,255,255,0.3);background: var(--basic-color)}
+#gnb .depth2 .menu > ul > li > a.active{border-bottom: 1px solid rgba(255,255,255,0.3);background: var(--basic-color-secondary);}
 #gnb .depth2 .menu > ul > li > ul > li > a{color: #fff;opacity: 1; font-size: 14px;padding-left: 32px;padding-left: 44px;margin-left: 0;}
+#gnb .depth2 .menu > ul > li > ul > li > a:hover{
+    background: var(--basic-color-secondary);
+}
 #gnb .depth2.menu01 .menuLvl4{background: trasnparent;}
 #gnb .depth2 .menu > ul > li > ul > li{border-top:none;}
-#gnb .depth2 .menu > ul > li > ul > li:hover{background: var(--basic-color)}
-#gnb .depth2 .menu > ul > li > ul > li > a.active{background: var(--basic-color);opacity: 1; font-weight: 600;}
+#gnb .depth2 .menu > ul > li > ul > li:hover{background: var(--basic-color);}
+#gnb .depth2 .menu > ul > li > ul > li > a.active{background: var(--basic-color);;opacity: 1; font-weight: 600;}
 #gnb .depth2 .menu > ul > li > ul > li > a.active > span.leafN{color: #fff; opacity: 1; font-weight: bold;}
 #gnb .depth2 .menu > ul > li > ul > li > a.active > span.leafN{ background: url(../../../images/theme/blue/ico-gnbarr-close.png) no-repeat right -2px center}
-/* #gnb .depth2.menu01 .menuLvl4{background: var(--basic-color)} */
+/* #gnb .depth2.menu01 .menuLvl4{background: var(--basic-color);} */
 #gnb .depth2 .menu > ul > li > ul > li > ul > li.active > a{color: #fff;}
-#gnb .depth2 .menu > ul > li > ul > li > ul > li> a{color: #babec2;}
+#gnb .depth2 .menu > ul > li > ul > li > ul > li> a{color: #fff; opacity: 1;}
+#gnb .depth2 .menu > ul > li > ul > li > ul > li> a:hover span{
+    opacity: 1; font-weight: bold;
+}
 #gnb .depth2 .menu > ul > li > ul > li > ul > li .active{color: #fff;}
 
 .CellR-main-tab ul{
@@ -3098,8 +3145,8 @@ a.download span{}
 .com-card1.is-active a::after,ul.hover .com-card1:hover a:after{
     background: #1428a0;
 }
-.com-card1.is-active a .num{
-    color: #1428a0;
+.com-card1.is-active a .num , .com-card1.is-active .size-tag{
+    background: #1428a0;
 }
 .c-chart{
     position: relative; padding: 0 10px;
@@ -3370,24 +3417,22 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
     color: #999999;
 }
 #gnb .depth2.menu01 .menuLvl4{
-    background: #0c48ac;
+    background: var(--basic-color-secondary);
 }
 #gnb > ul{
-    background: var(--basic-color)
+    background: var(--basic-color);
 }
 #gnb .fniconbg .fnicon{
     background-color: var(--basic-color);
 }
 #gnb > ul > li > a.gnb01{
     position: relative;
-    background-color: var(--basic-color);
+    background: var(--basic-color-secondary);
     border-bottom: 1px solid var(--basic-color);
-    background: none;
     width: 31px;
     height: 36px;
     text-indent: -9999px;
     border: 1px solid #fff;
-    background: var(--basic-color)
 }
 #gnb > ul > li > a.gnb01::before{
     content: '';
@@ -3581,7 +3626,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
 .all-menus .info>ul>li dt{
     height: 24px;
     padding-left: 15px;
-    background: var(--basic-color)
+    background: #1428a0;
     color: #fff;
     font-size: 14px;
     font-weight: bold;
@@ -3604,6 +3649,13 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
 .all-menus .info>ul>li dd ul{}
 .all-menus .info>ul>li dd ul li{
     margin-bottom: 10px;
+}
+.all-menus .info>ul>li dd ul li.l-bar a{
+    font-weight: 400;
+    color: #666;
+}
+.all-menus .info>ul>li dd ul li.l-bar a:hover{
+    color:#1428a0;
 }
 .all-menus .info>ul>li dd ul ul li{
     font-weight: 400;
@@ -3661,6 +3713,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
 .settings .info{
     padding: 22px; box-sizing: border-box;
     background: #fff;
+    border-radius: 5px;
 }
 .settings .info .header .wrap {
     display: flex;
@@ -3715,6 +3768,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
     height: 40px;
     align-items: center;
     background: #eeeeee;
+    border-radius: 5px;
 }
 .settings .bot .wrap .time{
     flex: 1;
@@ -3746,3 +3800,57 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
     justify-content: center;
 }
 #pop-user-info{display: none!important;}
+
+.skin-theme{
+    display: none;
+    width: 360px;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    background: #fff;
+    box-shadow: 9px 3px 28px -3px rgb(0 0 0 / 30%);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+.skin-theme.on{
+    display: block;
+}
+.skin-theme .header{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+}
+.skin-theme .header h1{
+    font-size: 18px;
+    font-weight: bold;
+}
+.skin-theme .theme-list{}
+.skin-theme .theme-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 25px;
+}
+.skin-theme .theme-list ul li{
+    flex: 1;
+    text-align: center;
+}
+.skin-theme .theme-list ul li .img{}
+.skin-theme .theme-list ul li .txt-select{    
+    text-align: center;
+    margin-top: 20px;
+}
+.skin-theme .theme-list ul li .txt-select p{
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+.skin-theme .theme-list ul li .txt-select label{
+    margin: 0;
+    margin-top: 10px;
+}
