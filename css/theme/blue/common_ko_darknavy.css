@@ -1943,26 +1943,120 @@ body {border-width:0px; width:100%;}
     }
 
 
-/**************************  스킨변경 칼라 선택 ******************************/
+
+/*=============================================
+=            스킨변경 칼라 선택            =
+=============================================*/
+
+ /* TODO BODY ADD CLASS 따라서 색상 변경 */
+
 body.Basic{
     /* TODO 원하는 색상 hsla값 넣어주세요 */
     --basic-color: hsla(217,83%,61%,1);
 
     /* TODO 공통: Hsla 세번째 인자값 위에서 -6% 빼주세요 */
     --basic-color-secondary :  hsla(217,83%,55%,1);
+    --basic-color-tertiary : hsla(231,78%,35%,1);
 }
 
 body.Green{
     --basic-color: hsla(117,77%,36%,1);
-    --basic-color-secondary: hsla(117,77%,26%,1);
+    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
+    --basic-color-secondary: hsla(117,77%,30%,1);
+    --basic-color-tertiary : hsla(117,77%,30%,1);
+}
+
+/* TODO 공통: 홈레이어 전체메뉴, 우측상단 아이콘, 설명자료 팝업아이콘, 로그아웃 아이콘 이미지색 블루->회색으로 통일 */
+body.Green .home-layers ul li a::after, body.Green .head .rnb .ico-bg img, body.Green .nav li.desc-data img,body.Green .settings .bot .wrap .login img, body.Green .section2.bd .next-btn,body.Green .section2.bd .prev-btn {
+    filter: grayscale(1);
 }
 
 body.Autumn{
-    --basic-color: hsla(21,70%,70%,1);
-    --basic-color-secondary: hsla(21,70%,64%,1);
+    --basic-color: hsla(21,70%,60%,1);
+    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
+    --basic-color-secondary: hsla(21,70%,56%,1);
+    --basic-color-tertiary : hsla(21,70%,56%,1);
 }
 
-/* Yellow , deepGreen , Spring ... 등 추가*/
+body.Autumn .home-layers ul li a::after, body.Autumn .head .rnb .ico-bg img, body.Autumn .nav li.desc-data img,body.Autumn .settings .bot .wrap .login img, body.Autumn .section2.bd .next-btn,body.Autumn .section2.bd .prev-btn{
+    filter: grayscale(1);
+}
+
+body.Yellow{
+    --basic-color: hsla(45,100%,45%,1);
+    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
+    --basic-color-secondary: hsla(45,100%,39%,1);
+    --basic-color-tertiary : hsla(45,100%,39%,1);
+}
+
+body.Yellow .home-layers ul li a::after, body.Yellow .head .rnb .ico-bg img, body.Yellow .nav li.desc-data img,body.Yellow .settings .bot .wrap .login img, body.Yellow .section2.bd .next-btn,body.Yellow .section2.bd .prev-btn{
+    filter: grayscale(1);
+}
+
+body.DeepGreen{
+    --basic-color: hsla(166,75%,44%,1);
+    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
+    --basic-color-secondary: hsla(166,75%,38%,1);
+    --basic-color-tertiary : hsla(166,75%,38%,1);
+}
+
+body.DeepGreen .home-layers ul li a::after, body.DeepGreen .head .rnb .ico-bg img, body.DeepGreen .nav li.desc-data img,body.DeepGreen .settings .bot .wrap .login img, body.DeepGreen .section2.bd .next-btn,body.DeepGreen .section2.bd .prev-btn{
+    filter: grayscale(1);
+}
+
+body.Spring{
+    --basic-color: hsla(350,100%,75%,1);
+    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
+    --basic-color-secondary: hsla(350,100%,69%,1);
+    --basic-color-tertiary : hsla(350,100%,69%,1);
+}
+
+body.Spring .home-layers ul li a::after, body.Spring .head .rnb .ico-bg img, body.Spring .nav li.desc-data img,body.Spring .settings .bot .wrap .login img, body.Spring .section2.bd .next-btn,body.Spring .section2.bd .prev-btn{
+    filter: grayscale(1);
+}
+
+body.Red{
+    --basic-color: hsla(0,100%,32%,1);
+    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
+    --basic-color-secondary: hsla(0,100%,26%,1);
+    --basic-color-tertiary : hsla(0,100%,26%,1);
+}
+
+body.Red .home-layers ul li a::after, body.Red .head .rnb .ico-bg img, body.Red .nav li.desc-data img,body.Red .settings .bot .wrap .login img, body.Red .section2.bd .next-btn,body.Red .section2.bd .prev-btn{
+    filter: grayscale(1);
+}
+
+body.Violet{
+    --basic-color: hsla(258,47%,54%,1);
+    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
+    --basic-color-secondary: hsla(258,47%,48%,1);
+    --basic-color-tertiary : hsla(258,47%,48%,1);
+}
+
+body.Violet .home-layers ul li a::after, body.Violet .head .rnb .ico-bg img, body.Violet .nav li.desc-data img,body.Violet .settings .bot .wrap .login img, body.Violet .section2.bd .next-btn,body.Violet .section2.bd .prev-btn{
+    filter: grayscale(1);
+}
+
+body.SkyBlue{
+    --basic-color: hsla(197,71%,63%,1);
+    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
+    --basic-color-secondary: hsla(197,71%,57%,1);
+    --basic-color-tertiary : hsla(197,71%,57%,1);
+}
+
+body.SkyBlue .home-layers ul li a::after, body.SkyBlue .head .rnb .ico-bg img, body.SkyBlue .nav li.desc-data img,body.SkyBlue .settings .bot .wrap .login img, body.SkyBlue .section2.bd .next-btn,body.SkyBlue .section2.bd .prev-btn{
+    filter: grayscale(1);
+}
+
+/*=====  End of 스킨변경 칼라 선택  ======*/
+
+
+/*----------  공통 선색깔  ----------*/
+body{
+    --basic-border : 5px solid #f5f5f5;
+}
+
+
 
 #gnb .depth2.menu01 .menu{background: var(--basic-color);}
 #gnb .depth2.menu01 .menuLvl2{background: var(--basic-color);}
@@ -2041,23 +2135,23 @@ body.Autumn{
     content: '';
     display: inline-block;
     left: 0; right: 0; bottom: 0;
-    height: 2px; background: #1428a0;width: 100%;
+    height: 2px; background: var(--basic-color-tertiary);width: 100%;
     position: absolute;
     width: 0%;
     transition: all 0.4s ease-in-out;
 }
 .CellR-main-tab ul li.active a{
-    color: #1428a0; font-weight: bold;
+    color: var(--basic-color-tertiary); font-weight: bold;
 }
 .CellR-main-tab ul li.active a::after{
     content: '';
     display: inline-block;
     left: 0;  bottom: 0;
-    height: 4px; background: #1428a0;width: 100%;
+    height: 4px; background: var(--basic-color-tertiary);width: 100%;
     position: absolute;
 }
 .CellR-main-tab ul li a:hover{
-    color: #1428a0; font-weight: bold;
+    color: var(--basic-color-tertiary); font-weight: bold;
 }
 .containerCellR{background: #fff;}
 .contents{background: #fff;}
@@ -2065,7 +2159,7 @@ body.Autumn{
 .tbl-bg{box-shadow: none; padding: 0;border-bottom: none;}
 .com-border{
     background: #fff;
-    border: 10px solid #f5f5f5; border-radius: 10px;
+    border : var(--basic-border); border-radius: 10px;
     padding: 10px 20px;
 }
 .com-sarch-type01{}
@@ -2143,7 +2237,7 @@ body.Autumn{
 .com-sarch-type01 .flex .lef ul li dl dt{
     position: relative;
     font-size: 14px;
-    color: #1428a0;
+    color: var(--basic-color-tertiary);
     font-weight: bold;
     margin-right: 13px;
     flex: 0 0 95px; 
@@ -2152,7 +2246,7 @@ body.Autumn{
 .com-sarch-type01 .flex .lef ul li dl dt::before{
     content: '';
     position: absolute; left: 0; top: 50%; transform: translateY(-50%);
-    width: 3px; height: 14px;  background: #1428a0;
+    width: 3px; height: 14px;  background: var(--basic-color-tertiary);
 }
 .com-sarch-type01 .flex .lef ul li dl dd{
     flex: 1;
@@ -2194,7 +2288,7 @@ body.Autumn{
 .com-table  tr th .form-chkbox__indicator::after{display: none;}
 .com-table tr th{
     height: 35.5px; line-height: 35.5px; text-align: center;
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
     color: #fff; font-size: 14px; font-weight: bold;
     border: 0.5px solid #b5b5b5;
     position: sticky;
@@ -2202,7 +2296,7 @@ body.Autumn{
     z-index: 11;
 }
 .com-table tr td a:hover{
-    color: #1428a0;
+    color: var(--basic-color-tertiary);
 }
 .com-table tr:hover {
     background: #e7eaff!important;
@@ -2283,7 +2377,7 @@ background: #f4f4f4;
     padding-left: 23px;
     position: relative;
     border-radius: 10px 10px 0 0;
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .cd-popup-container .had-tit::before{
     content: '';
@@ -2318,7 +2412,7 @@ background: #f4f4f4;
     padding-left: 13px;
     font-size: 14px;
     font-weight: bold;
-    color: #1428a0;
+    color: var(--basic-color-tertiary);
 }
 .bg-info .pop-tbl-type01 table tr td{
     border-right: none!important;
@@ -2383,7 +2477,7 @@ background: #f4f4f4;
     overflow-y: scroll;
 }
 .bg-main{
-    background: #1428a0; color: #fff;
+    background: var(--basic-color-tertiary); color: #fff;
 }
 .size-mid{
     width: 100px; height: 30px; line-height: 30px; font-size: 14px; font-weight: bold; border-radius: 5px;
@@ -2396,7 +2490,7 @@ background: #f4f4f4;
 }
 .bd-none{border:none!important;}
 .bd-none.h800+.bd-none.h800 .com-card1 a
-.c-main{color: #1428a0;font-weight: bold;}
+.c-main{color: var(--basic-color-tertiary);font-weight: bold;}
 .c-red{font-weight: bold; color: #ff332e;}
 .section2{padding-top: 20px;}
 .section2.bd{position: relative; padding:10px; border: 1px solid #cccccc; border-radius:0 0  5px;}
@@ -2426,9 +2520,9 @@ background: #f4f4f4;
 }
 a.download{
     display: inline-block; width: 140px; height: 30px;
-    border: 1px solid #1428a0;
+    border: 1px solid var(--basic-color-tertiary);
     border-radius: 5px; text-align: center; line-height: 28px;
-    color: #1428a0; font-weight: bold; font-size: 14px;
+    color: var(--basic-color-tertiary); font-weight: bold; font-size: 14px;
 }
 a.download img{
     display: inline-block; margin-right: 5px;
@@ -2460,7 +2554,7 @@ a.download span{}
     width: 100px;
     height: 30px;
     line-height: 30px;
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
     text-align: center;
     color: #fff;
     border-radius: 5px; font-weight: bold; font-size: 14px;
@@ -2471,8 +2565,8 @@ a.download span{}
 }
 .c-btn-set li.default a{
     background: #fff;
-    border: 1px solid #1428a0;
-    color: #1428a0; font-weight: bold; font-size: 14px;
+    border: 1px solid var(--basic-color-tertiary);
+    color: var(--basic-color-tertiary); font-weight: bold; font-size: 14px;
 }
 .c-btn-set li a img{
     display: inline-block; margin-right: 3px;
@@ -2526,8 +2620,8 @@ a.download span{}
 }
 
 .form-chkbox input:checked + .form-chkbox__indicator {
-    background: #1428a0;
-    border: 1px solid #1428a0;
+    background: var(--basic-color-tertiary);
+    border: 1px solid var(--basic-color-tertiary);
 }
 .form-chkbox__indicator::after {
     content: '';
@@ -2618,8 +2712,8 @@ a.download span{}
     transform: translateY(-50%);
 }
 .form-radio input[type="radio"]:checked + label::after {
-    background-color: #1428a0 !important;
-    border: 1px solid #1428a0 !important;
+    background-color: var(--basic-color-tertiary) !important;
+    border: 1px solid var(--basic-color-tertiary) !important;
 }
 .c-form-input,.c-form-box{
     width: 100%; height: 30px; line-height: 30px;color: #010101; font-weight: bold; padding: 8px 10px; border: 1px solid #aaaaaa; border-radius: 3px;
@@ -2694,7 +2788,7 @@ a.download span{}
 .pagings span.on {
     vertical-align: middle;
     color: #fff;
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .pagings span.on a {
     color: #fff;
@@ -2714,12 +2808,12 @@ a.download span{}
     transform: translateY(-50%);
     width: 3px;
     height: 14px;
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .com-tpy-had2{
     position: relative;
     padding: 6px 8px;
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
     font-size: 20px; font-weight: bold; color: #fff;
     display: inline-block;
 }
@@ -2740,7 +2834,7 @@ a.download span{}
 .com-tpy-had{
     height: 45px;
     line-height: 45px;
-    background: #152eaa;
+    background: var(--basic-color-tertiary);
     display: flex;
     align-items: center;
     border-radius: 10px 10px 0 0;
@@ -2779,7 +2873,7 @@ a.download span{}
 }
 .com-bg-info.bg-fff{
     background: #fff;
-    border: 1px solid #aaaaaa;
+    border : var(--basic-border);
 }
 .br-none{
     border-right: none!important;
@@ -2819,7 +2913,7 @@ a.download span{}
     border: 1px solid #c7c7c7;
 }
 .card-type01 li a:hover{
-    border: 2px solid #152eaa;
+    border: 2px solid var(--basic-color-tertiary);
 }
 .card-type01 li .toggle-btn-wrap{
     width: 260px;
@@ -2894,7 +2988,7 @@ a.download span{}
 }
 .flex-w50 .ref{}
 .com-had-type02{
-    border: 1px solid #ccc;
+    border : var(--basic-border);
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -2914,7 +3008,7 @@ a.download span{}
     position: relative;
     font-size: 14px;
     font-weight: bold;
-    color: #1428a0;
+    color: var(--basic-color-tertiary);
     margin-right: 15px;
     flex: 0 0 130px;
     padding-left: 14px;
@@ -3143,10 +3237,10 @@ a.download span{}
     background: #edf2ff;
 }
 .com-card1.is-active a::after,ul.hover .com-card1:hover a:after{
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .com-card1.is-active a .num , .com-card1.is-active .size-tag{
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .c-chart{
     position: relative; padding: 0 10px;
@@ -3196,7 +3290,7 @@ a.download span{}
 }
 .process-wrap{}
 .bd-line-type1{
-    border: 1px solid #aaaaaa;
+    border : var(--basic-border);
     padding: 10px 7px;
     border-radius: 5px;
 }
@@ -3255,23 +3349,23 @@ a.download span{}
     flex:1.1;
 }
 .process-wrap ul.protype1 li a .wrap:hover p{
-    color: #1428a0;
+    color: var(--basic-color-tertiary);
 }
 .process-wrap ul.protype1 li a .wrap:hover::after{
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .process-wrap ul.protype1 li a .wrap:hover svg path,.process-wrap ul.protype1 li a .wrap:hover svg rect,.process-wrap ul.protype1 li a .wrap:hover svg line{
-    stroke: #1428a0!important;
+    stroke: var(--basic-color-tertiary)!important;
     animation: ani 3s;
 }
 .process-wrap ul.protype1 li.is-active a .wrap p{
-    color: #1428a0;
+    color: var(--basic-color-tertiary);
 }
 .process-wrap ul.protype1 li.is-active a .wrap::after{
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .process-wrap ul.protype1 li.is-active a .wrap svg path,.process-wrap ul.protype1 li.is-active a .wrap svg rect,.process-wrap ul.protype1 li.is-active a .wrap svg line{
-    stroke: #1428a0!important;
+    stroke: var(--basic-color-tertiary)!important;
     animation: ani 3s;
 }
 @keyframes ani{
@@ -3286,7 +3380,7 @@ a.download span{}
     display: block;
 }
 .form-chkbox input:checked + .form-chkbox__indicator {
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .language{
     display: flex;
@@ -3306,25 +3400,25 @@ a.download span{}
     border-radius: 5px;
 }
 .language li a:hover{
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 .language li.is-active{
     flex: 1.1;
 }
 .language li.is-active a{
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
 }
 
 .ch-txt{
     display: flex; align-items: center; justify-content: center;
     width: 25px; height: 28px;
-    border: 2px solid #1428a0;
+    border: 2px solid var(--basic-color-tertiary);
     margin-left: 15px;
 }
 .ch-txt span{
  display: inline-block;
  font-size: 15px; font-weight: bold;
- color: #1428a0;
+ color: var(--basic-color-tertiary);
 }
 
 .protype2{
@@ -3365,7 +3459,7 @@ a.download span{}
 }
 .protype2 li a .num{
     font-size: 30px;
-    /* color: #1428a0; */
+    /* color: var(--basic-color-tertiary); */
     font-weight: 500;
     background: transparent!important;
 }
@@ -3381,8 +3475,8 @@ a.download span{}
     background: #000;
 }
 li.c-process a:after,li.c-process a::before, li.c-process .num , li.c-process .value , .root li.c-process::before{
-    background: #1428a0;
-    color: #1428a0;
+    background: var(--basic-color-tertiary);
+    color: var(--basic-color-tertiary);
 }
 li.c-job a:after, li.c-job .num, li.c-job .value,.root li.c-job::before{
     background: #1255eb;
@@ -3506,7 +3600,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
     /* font-weight: bold; */
     display: block;
     font-size: 14px;
-    color: #1428a0;
+    color: #333;
     padding-top: 40px;
 }
 .home-layers ul li a::after{
@@ -3626,7 +3720,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
 .all-menus .info>ul>li dt{
     height: 24px;
     padding-left: 15px;
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
     color: #fff;
     font-size: 14px;
     font-weight: bold;
@@ -3644,7 +3738,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
     font-weight: bold;
 }
 .all-menus .info>ul>li dd a:hover{
-    color:#1428a0;
+    color:var(--basic-color-tertiary);
 }
 .all-menus .info>ul>li dd ul{}
 .all-menus .info>ul>li dd ul li{
@@ -3655,7 +3749,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
     color: #666;
 }
 .all-menus .info>ul>li dd ul li.l-bar a:hover{
-    color:#1428a0;
+    color:var(--basic-color-tertiary);
 }
 .all-menus .info>ul>li dd ul ul li{
     font-weight: 400;
@@ -3748,7 +3842,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
     content: '';
     display: inline-block;
     width: 4px; height: 14px; margin-right: 5px;
-    background: #1428a0;
+    background: var(--basic-color-tertiary);
     position: relative;
     top: 2px;
 }
@@ -3789,7 +3883,7 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
     color: #2d2d2d;
 }
 .settings .bot .wrap .login a:hover{
-    color: #1428a0;
+    color: var(--basic-color-tertiary);
 }
 .settings .bot .wrap .login{
     flex: 1;
