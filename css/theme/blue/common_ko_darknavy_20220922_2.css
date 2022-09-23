@@ -1972,81 +1972,17 @@ body.Green .home-layers ul li a::after, body.Green .head .rnb .ico-bg img, body.
 }
 
 body.Autumn{
-    --basic-color: hsla(21,70%,60%,1);
+    --basic-color: hsla(21,70%,70%,1);
     /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
-    --basic-color-secondary: hsla(21,70%,56%,1);
-    --basic-color-tertiary : hsla(21,70%,56%,1);
+    --basic-color-secondary: hsla(21,70%,64%,1);
+    --basic-color-tertiary : hsla(21,70%,64%,1);
 }
 
+/* TODO 공통: 홈레이어 전체메뉴, 우측상단 아이콘, 설명자료 팝업아이콘, 로그아웃 아이콘 이미지색 블루->회색으로 통일 */
 body.Autumn .home-layers ul li a::after, body.Autumn .head .rnb .ico-bg img, body.Autumn .nav li.desc-data img,body.Autumn .settings .bot .wrap .login img, body.Autumn .section2.bd .next-btn,body.Autumn .section2.bd .prev-btn{
     filter: grayscale(1);
 }
-
-body.Yellow{
-    --basic-color: hsla(45,100%,45%,1);
-    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
-    --basic-color-secondary: hsla(45,100%,39%,1);
-    --basic-color-tertiary : hsla(45,100%,39%,1);
-}
-
-body.Yellow .home-layers ul li a::after, body.Yellow .head .rnb .ico-bg img, body.Yellow .nav li.desc-data img,body.Yellow .settings .bot .wrap .login img, body.Yellow .section2.bd .next-btn,body.Yellow .section2.bd .prev-btn{
-    filter: grayscale(1);
-}
-
-body.DeepGreen{
-    --basic-color: hsla(166,75%,44%,1);
-    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
-    --basic-color-secondary: hsla(166,75%,38%,1);
-    --basic-color-tertiary : hsla(166,75%,38%,1);
-}
-
-body.DeepGreen .home-layers ul li a::after, body.DeepGreen .head .rnb .ico-bg img, body.DeepGreen .nav li.desc-data img,body.DeepGreen .settings .bot .wrap .login img, body.DeepGreen .section2.bd .next-btn,body.DeepGreen .section2.bd .prev-btn{
-    filter: grayscale(1);
-}
-
-body.Spring{
-    --basic-color: hsla(350,100%,75%,1);
-    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
-    --basic-color-secondary: hsla(350,100%,69%,1);
-    --basic-color-tertiary : hsla(350,100%,69%,1);
-}
-
-body.Spring .home-layers ul li a::after, body.Spring .head .rnb .ico-bg img, body.Spring .nav li.desc-data img,body.Spring .settings .bot .wrap .login img, body.Spring .section2.bd .next-btn,body.Spring .section2.bd .prev-btn{
-    filter: grayscale(1);
-}
-
-body.Red{
-    --basic-color: hsla(0,100%,32%,1);
-    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
-    --basic-color-secondary: hsla(0,100%,26%,1);
-    --basic-color-tertiary : hsla(0,100%,26%,1);
-}
-
-body.Red .home-layers ul li a::after, body.Red .head .rnb .ico-bg img, body.Red .nav li.desc-data img,body.Red .settings .bot .wrap .login img, body.Red .section2.bd .next-btn,body.Red .section2.bd .prev-btn{
-    filter: grayscale(1);
-}
-
-body.Violet{
-    --basic-color: hsla(258,47%,54%,1);
-    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
-    --basic-color-secondary: hsla(258,47%,48%,1);
-    --basic-color-tertiary : hsla(258,47%,48%,1);
-}
-
-body.Violet .home-layers ul li a::after, body.Violet .head .rnb .ico-bg img, body.Violet .nav li.desc-data img,body.Violet .settings .bot .wrap .login img, body.Violet .section2.bd .next-btn,body.Violet .section2.bd .prev-btn{
-    filter: grayscale(1);
-}
-
-body.SkyBlue{
-    --basic-color: hsla(197,71%,63%,1);
-    /* TODO Basic를 제외한 나머지 색은  --basic-color-secondary,--basic-color-tertiary 칼라색 동일합니다. */
-    --basic-color-secondary: hsla(197,71%,57%,1);
-    --basic-color-tertiary : hsla(197,71%,57%,1);
-}
-
-body.SkyBlue .home-layers ul li a::after, body.SkyBlue .head .rnb .ico-bg img, body.SkyBlue .nav li.desc-data img,body.SkyBlue .settings .bot .wrap .login img, body.SkyBlue .section2.bd .next-btn,body.SkyBlue .section2.bd .prev-btn{
-    filter: grayscale(1);
-}
+/* Yellow , deepGreen , Spring ... 등 테마 추가 예정 */
 
 /*=====  End of 스킨변경 칼라 선택  ======*/
 
@@ -3947,55 +3883,4 @@ li.c-chk a:after, li.c-chk .num, li.c-chk .value,.root li.c-chk::before{
 .skin-theme .theme-list ul li .txt-select label{
     margin: 0;
     margin-top: 10px;
-}
-
-
-
-/* 20220923 css 수정 및 추가 */
-.com-table tr:last-of-type td{
-    border-bottom: none;
-}
-.com-tbl-wrap{
-    position: relative;
-    border-bottom: 1px solid #aaa;
-}
-.com-tbl-wrap::after{
-    content: ''; display: block;
-    position: absolute; left: 0; top: 0; height: 100%; width: 1px;
-    background: #aaa;
-}
-.com-tbl-wrap::before{
-    content: ''; display: block;
-    position: absolute; right: 0; top: 0; height: 100%; width: 1px;
-    background: #aaa;
-}
-
-
-/*----------   
-    TODO Table 높이 지정 css
-    <div class="com-tbl-wrap h400">  테이블 높이 400px
-    <div class="com-tbl-wrap h500">  테이블 높이 500px
-    <div class="com-tbl-wrap h600">  테이블 높이 600px
-    <div class="com-tbl-wrap h700">  테이블 높이 700px
-    <div class="com-tbl-wrap h800">  테이블 높이 800px
-----------*/
-.com-tbl-wrap.h400{
-    max-height: 400px!important;
-    height: 400px!important;
-}
-.com-tbl-wrap.h500{
-    max-height: 500px!important;
-    height: 500px!important;
-}
-.com-tbl-wrap.h600{
-    max-height: 600px!important;
-    height: 600px!important;
-}
-.com-tbl-wrap.h700{
-    max-height: 700px!important;
-    height: 700px!important;
-}
-.com-tbl-wrap.h800{
-    max-height: 800px!important;
-    height: 800px!important;
 }
