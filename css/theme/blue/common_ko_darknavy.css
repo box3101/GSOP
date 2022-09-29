@@ -4201,9 +4201,9 @@ a.download img{
     border: 1px solid #bbbbbb;
     border-radius: 5px;
     overflow: scroll;
-    width: 100%;
-    width: 1650px;
+    /* width: 100%; */
     max-height: 850px;
+    text-align: center;
 }
 .tf-trees__btns {
     position: absolute;
@@ -4218,14 +4218,14 @@ a.download img{
     border-radius: 5px;
 }
 .tf-trees__wrap {
-    display: grid;
+    display: inline-block;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 .tf-trees__wrap ul.flex{
     display: flex;
     position: relative;
-    justify-content: center;
 }
 .tf-trees__wrap ul.flex::before{
     content: '';
@@ -4239,6 +4239,7 @@ a.download img{
     z-index: 11;
     transform: translateX(-50%);
 }
+.tf-trees__wrap ul
 .tf-trees__wrap ul.flex li{
     margin-left: 15px;
     margin-right: 15px;
@@ -4253,7 +4254,7 @@ a.download img{
 .tf-trees__wrap ul.flex li:last-of-type{
     margin-right: 0;
 }
-.tf-trees__wrap ul li:before{
+.tf-trees__profile::before{
     content: '';
     display: block;
     position: absolute;
@@ -4265,6 +4266,18 @@ a.download img{
     background: #aaa;
     top: -15px;
 }
+/* .tf-trees__wrap ul li:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 20px;
+    z-index: -13;
+    background: #aaa;
+    top: -15px;
+} */
 .tf-trees__wrap ul.tac>li .tf-trees__profile{
     margin: 0 auto;
 }
@@ -4309,7 +4322,7 @@ a.download img{
     display: block;
     background: #b5b5b5;
     width: 1px;
-    height: 40px;
+    height: 15px;
     position: absolute;
     top: auto;
     left: 50%;
@@ -4346,4 +4359,7 @@ ul.flex .tf-trees__profile:last-of-type::after{
 }
 .tf-trees__part-right {
 
+}
+.section2.w1650{
+    width: 1650px;
 }
