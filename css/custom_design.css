@@ -3453,7 +3453,7 @@
     #UserDashboard .manual-down {width: 100%; height: 75px; display: inline-block; position: relative;
     vertical-align: middle; color: #fff; font-size: 16px; line-height: 75px; padding-left: 20px; font-weight: bold;
     background: url(../images/new_img/dashboard/manual_down_bg.png) no-repeat 90% center; background-color:#00c9e7; cursor:pointer;} /*210128 cursor:pointer 추가*/
-    #UserDashboard .img {width:100%; height:730px; background-color:#fff; background: url(../images/new_img/dashboard/dashboard_img.jpg) no-repeat center center; background-size: 100% 100%;}
+    #UserDashboard .img {width:100%; height:730px; background-color:#fff; background: url(../images/StrategyGATE_introducing_bg.jpg) no-repeat center center; background-size: 100% 100%;}
     #UserDashboard .shortcut {display:flex; width:100%; margin-top:15px;}
     #UserDashboard .shortcut li {background-color:#fff !important; flex:1; margin-right:15px; height:90px; color:#555; font-size:16px; font-weight: bold; line-height:90px; padding-left:110px; cursor:pointer;} /*210128 cursor:pointer 추가*/
     #UserDashboard .shortcut .banner01 {background: url(../images/new_img/dashboard/dash-ico-01.png) no-repeat 20px center;}
@@ -4010,6 +4010,12 @@
 		height:15px;
 	}
 	#popBoardApp .pagination li:last-child a{
+		height:15px;
+	}
+    .pagination li:first-child a {
+		height:15px;
+	}
+	.pagination li:last-child a{
 		height:15px;
 	}
 

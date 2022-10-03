@@ -17,7 +17,7 @@
 	  left: 0;
 	  width: 100%;
 	  height: 100%;
-	  background-color: rgba(0,0,0,0.5);
+	  /*background-color: rgba(0,0,0,0.5);*/
 	  display: table;
 	  -webkit-transition: opacity 0.3s ease;
 	  transition: opacity 0.3s ease;
@@ -45,7 +45,11 @@
 	  color: #42b983;
 	}
 	.modal-body {
-	  margin: 0px 0;
+	  width: 100%;
+      box-sizing: border-box;
+      padding: 10px!important;
+      background: #e8e8e8;
+      border-radius: 10px;
 	}
 	.modal-button {
 	  float: right;
@@ -110,19 +114,7 @@
 	/* pagination */
 
     .ui-sortable-helper {
-    	display: block !important;
-        margin-top: 5px;
-        padding: 4px 10px;
-        width: 180px !important;
-        border-radius: 10px;
-        height: 50px !important;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        line-height: 50px !important;
-        overflow: hidden;
-        margin-right: 5px;
-        display: block;
-        float: left;
+        display: table !important;
 	}
 
 	/*

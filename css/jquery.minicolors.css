@@ -48,6 +48,7 @@
 /* Panel */
 .minicolors-panel {
   position: absolute;
+  left: 20%;
   width: 173px;
   background: white;
   border-radius: 2px;
@@ -265,10 +266,10 @@
 
 /* Default theme */
 .minicolors-theme-default .minicolors-swatch {
-  top: 5px;
-  left: 5px; /* LTR */
-  width: 18px;
-  height: 18px;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
 }
 [dir=rtl] .minicolors-theme-default .minicolors-swatch {
   right: 5px;
@@ -318,12 +319,12 @@
 
 /* Bootstrap theme */
 .minicolors-theme-bootstrap .minicolors-swatch {
-  z-index: 2;
-  top: 3px;
-  left: 3px; /* LTR */
-  width: 28px;
-  height: 28px;
-  border-radius: 2px;
+	z-index: 2;
+    top: 0px;
+    left: 20%;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
 }
 [dir=rtl] .minicolors-theme-bootstrap .minicolors-swatch {
   right: 3px;
@@ -341,6 +342,18 @@
 .minicolors-theme-bootstrap .minicolors-swatch-color {
   border-radius: inherit;
 }
+
+.minicolors-swatch::after {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 0px rgb(0 0 0 / 0%);
+    border-radius: 6px;
+}
+
 .minicolors-theme-bootstrap.minicolors-position-right > .minicolors-swatch {
   left: auto; /* LTR */
   right: 3px; /* LTR */
@@ -351,7 +364,15 @@
 }
 .minicolors-theme-bootstrap .minicolors-input {
   float: none;
-  padding-left: 44px; /* LTR */
+  text-align: center;
+  jmargin-left: 6px;
+  margin-left: 30%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b5b5b5; border-radius: 5px;
+  padding-left: 0px;
 }
 [dir=rtl] .minicolors-theme-bootstrap .minicolors-input {
   text-align: right;
@@ -372,7 +393,7 @@
   left: 4px; /* LTR */
   width: 37px;
   height: 37px;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 [dir=rtl] .minicolors-theme-bootstrap .minicolors-input.input-lg + .minicolors-swatch {
   right: 4px;
@@ -390,7 +411,7 @@
   border-bottom-left-radius: 0; /* LTR */
 }
 [dir=rtl] .input-group .minicolors-theme-bootstrap .minicolors-input {
-  border-radius: 4px;
+  border-radius: 6px;
 }
 [dir=rtl] .input-group .minicolors-theme-bootstrap:not(:first-child) .minicolors-input {
   border-top-right-radius: 0;

@@ -76,7 +76,7 @@
   z-index: 1;
   /* fixes ie bug (see #392) */
   position: absolute;
-  top: 0;
+  top: 4px;
   right: 3px;
   bottom: 0;
   width: 17px;
@@ -87,8 +87,8 @@
   text-decoration: none;
   vertical-align: middle;
   display: inline-block;
-  padding: 3px 0 0 0;
-  border-left: 1px solid #818590;
+  padding: 2sspx 0 0 0;
+  border-left: 1px solid #a5a5a5;
   -webkit-border-radius: 0 2px 2px 0;
   -moz-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
@@ -100,7 +100,7 @@
   background: rgba(0, 0, 0, 0.05);
 }
 .selectize-control.plugin-remove_button [data-value].active .remove {
-  border-left-color: #818590;
+  border-left-color: #a5a5a5;
 }
 .selectize-control.plugin-remove_button .disabled [data-value] .remove:hover {
   background: none;
@@ -133,10 +133,11 @@
   display: inline-block;
 }
 .selectize-input {
-  border: 1px solid #e1e1e1;
+  border: 1px solid #aaaaaa;
   /*padding: 2px 8px 2px 8px;*/
   display: inline-block;
   width: 100%;
+  height: 30px;
   /*min-height : 28px;*/
   /*overflow: hidden;*/
   overflow: visible;
@@ -183,11 +184,12 @@
 }
 .selectize-control.multi .selectize-input > div {
   cursor: pointer;
-  margin: 0 3px 3px 0;
-  padding: 3px 8px;
+  margin: 0 6px 6px 0;
+  padding: 5px 8px;
   background: ##2E343f;
   color: #fff;
   border: 1px solid ##2E343f;
+  font-weight: 500;
 }
 .selectize-control.multi .selectize-input > div.active {
   background: #4c6eae;
@@ -200,9 +202,10 @@
 }
 .selectize-input > input {
   display: inline-block !important;
-  padding: 0 !important;
+  padding: 0px 0px 0px 6px !important;
   min-height: 0 !important;
   max-height: none !important;
+  max-width: 200px !important;
   max-width: 100% !important;
   margin: 0 1px !important;
   text-indent: 0 !important;
@@ -336,9 +339,14 @@
   background-color: #fafafa;
 }
 .selectize-control.multi .selectize-input.has-items {
-  /* padding-top: 3px; */
-  padding-left: 3px;
-  padding-right: 3px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #010101;
+  font-weight: bold;
+  padding: 0px 10px;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
 }
 .selectize-control.multi .selectize-input.disabled [data-value] {
   color: #999;
@@ -358,8 +366,8 @@
   /*text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3);*/
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  border-radius: 10px;
-  background-color: #647188;
+  border-radius: 5px;
+  background-color: #a5a5a5;
   /* background-image: -moz-linear-gradient(top, #70737b, #70737b);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1da7ee), to(#178ee9));
   background-image: -webkit-linear-gradient(top, #1da7ee, #178ee9);
@@ -371,7 +379,7 @@
   box-shadow: 0 1px 0 rgba(0,0,0,0.2),inset 0 1px rgba(255,255,255,0.03); */
 }
 .selectize-control.multi .selectize-input [data-value].active {
-  background-color: #647188;
+  background-color: #a5a5a5;
   /* background-image: -moz-linear-gradient(top, #008fd8, #0075cf);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#008fd8), to(#0075cf));
   background-image: -webkit-linear-gradient(top, #008fd8, #0075cf);
